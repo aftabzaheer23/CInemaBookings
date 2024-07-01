@@ -24,7 +24,7 @@ namespace CInemaBookings.Controllers
         {
             return View(await _context.Movie.ToListAsync());
         }
-
+    
         // GET: NewMovie/Details/5
         public async Task<IActionResult> Details(int? id)
         {
