@@ -9,9 +9,9 @@
 </div>
 
 <table class="table">
-    <thead>
+    <thead class ="bg-dark btn-dark">
         <tr>
-            <th>
+            <th >
                 @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
@@ -49,9 +49,9 @@
                     @Html.DisplayFor(modelItem => item.MainLead)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>|
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>|
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a> | 
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }
@@ -61,5 +61,5 @@
 <br />
 
 <div class="text-center">
-    <a asp-action="Create">Add a Movie</a>
+    <a asp-action="Create" class="btn btn-success">Add a Movie</a>
 </div>
